@@ -36,3 +36,24 @@ function getComment(props){
     }
 }
 
+function postLoad(){
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(data=>getPost(data))
+}
+
+function getPost(data){
+    const postBox = document.getElementById('post-box');
+    for(const post of data){
+        const div = document.createElement('div');
+        div.classList.add('post');
+        div.innerText =`
+        <h2>${post.title}</h2>
+        <p>${post.body}</p>`
+
+        postBox.appendChild(div);
+
+
+    }
+}
+
