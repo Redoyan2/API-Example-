@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div style="text-align: center; margin-top: 10%; padding: 30px; font-size: 40px; background-color: cornsilk;">
+        <button onclick="userLoad()"><h1>User Load</h1></button>
+        <button onclick="postLoad()"><h1>Post Load</h1></button>
+        <button onclick="loadComment()"><h1>Comment Load</h1></button>
+        <div>
+            <h1 id="user-head">User Name are below:</h1>
+            <h1 id="user-coment">User Coment are below:</h1>
+            <div id="comment-box">
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <script src="js/Api.js"></script>
 </body>
 </html>
